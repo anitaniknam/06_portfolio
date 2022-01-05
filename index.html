@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Forside</title>
+  </head>
+  <body>
+    <header>
+      <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          ><img src="" alt=""
+        /></a>
+        <a href="ommig.html">Om mig</a>
+        <a href="tema03.html">Tema 03</a>
+        <a href="tema04.html">Tema 04</a>
+        <a href="tema05.html">Tema 05</a>
+      </div>
+      <button class="openbtn" onclick="openNav()">
+        <img src="" alt="menu_knap" />
+      </button>
+      <div class="logo">
+        <a href="index.html"
+          ><img src="UI_elementer/Yellow_logo_color_pos_RGB.png" alt=""
+        /></a>
+      </div>
+      <nav id="nav_desktop">
+        <ul>
+          <li><a href="ommig.html">Om mig</a></li>
+          <li><a href="tema03.html">Tema 03</a></li>
+          <li><a href="tema04.html">Tema 04</a></li>
+          <li><a href="tema05.html">Tema 05</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="splashbillede_section">
+      <div id="læsommig_button1">
+        <button
+          id="læsommig_button1"
+          onclick="window.location.href='ommig.html'"
+        >
+          Læs mere om mig
+        </button>
+      </div>
+    </section>
+    <footer>
+      <div id="personligeinformationer">
+        <h3>PERSONLIGE INFORMATIONER</h3>
+        <ul>
+          <li>Telefonnummer <span class="tlf">+45 50 53 07 22‬</span></li>
+          <li>Email <span class="email">anit8842@stud.kea.dk</span></li>
+          <li>
+            Instagram
+            <a href="https://www.instagram.com/anitaniknam/"
+              ><img src="" alt="instagram"
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <div id="ommig" onclick="window.location.href='ommig.html'">
+        <h3>OM MIG</h3>
+      </div>
+      <div id="tema03" onclick="window.location.href='tema03.html'">
+        <h3>TEMA 03</h3>
+      </div>
+      <div id="tema04" onclick="window.location.href='tema04.html'">
+        <h3>TEMA 04</h3>
+      </div>
+      <div id="tema05" onclick="window.location.href='tema05.html'">
+        <h3>TEMA 05</h3>
+      </div>
+      <div id="some"></div>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
