@@ -9,6 +9,7 @@ function sidenVises() {
   document.querySelector("#baggrundsmusik").volume = 0.1;
   document.querySelector("#baggrundsmusik").play();
   document.querySelector("#baggrundsmusik").currentTime = 0;
+  document.querySelector("#baggrundsmusik").repa = 0;
 }
 
 function windowResize() {
