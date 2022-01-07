@@ -330,7 +330,7 @@ body {
   top: 80%;
 }
 
-#kat_container {
+/* #kat_container {
   width: 100%;
   position: absolute;
   aspect-ratio: 1/1;
@@ -350,7 +350,7 @@ body {
   100% {
     transform: translateX(400%);
   }
-}
+} */
 
 /* anmation effekter */
 
