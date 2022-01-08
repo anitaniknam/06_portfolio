@@ -7,16 +7,23 @@
 body {
   max-width: 1000px;
   margin: 0 auto;
+  background-color: #d88e5c;
+  overflow-x: hidden;
 }
 
 /* header/nav start */
 
-header {
-  background: #d88e5c;
+#grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 10px;
+}
+
+header {
+  background: #e2ceb5;
   position: sticky;
-  top: 0;
+  top: 30px;
 }
 
 header ul {
@@ -29,23 +36,48 @@ a {
   color: #e99c64;
 }
 
-.logo img {
-  height: 100%;
-  width: 100%;
-  grid-column: 2;
+#lukmenu_knap {
+  grid-column: 1/1;
+  grid-row: 1/1;
 }
 
-/* #mySidepanel {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-} */
+#åbenmenu_knap {
+  grid-column: 1/1;
+  grid-row: 1/1;
+  place-self: center;
+}
+
+#logo img {
+  height: 100%;
+  width: 100%;
+}
+
+#logo {
+  grid-column: 2/2;
+  grid-row: 1/1;
+  width: 13rem;
+  place-self: center;
+}
+
+#katte {
+  grid-column: 3/3;
+  grid-row: 1/1;
+  width: 7rem;
+  margin-bottom: 15px;
+  padding-right: 10px;
+  place-self: center;
+}
+
+#katte img {
+  width: 100%;
+  height: 100%;
+}
 
 .sidepanel {
   height: 925px;
   position: fixed;
   z-index: 1;
-  top: 0;
+  top: 30px;
   left: 0;
   background-color: #e2ceb5;
   overflow-x: hidden;
@@ -54,7 +86,7 @@ a {
 }
 
 .sidepanel a {
-  padding: 0px 0px 50px 30px;
+  margin: 0px 0px 50px 30px;
   text-decoration: none;
   color: #000000;
   display: block;
@@ -65,10 +97,11 @@ a {
   font-weight: 800;
   font-size: 1.8rem;
   line-height: 50px;
+  padding-right: 40px;
 }
 
 .sidepanel a:hover {
-  color: #de690a;
+  color: #dd6300;
 }
 
 .sidepanel .closebtn {
@@ -80,7 +113,7 @@ a {
 .openbtn {
   cursor: pointer;
   place-self: start start;
-  padding: 30px 50px 0px 30px;
+  margin: 30px 30px 30px 30px;
   border: none;
   background: transparent;
 }
@@ -88,3 +121,67 @@ a {
 #nav_desktop {
   display: none;
 }
+
+/* footer */
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  background: #e2ceb5;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+footer h4 {
+  font-size: 12px;
+  font-family: "Outfit", sans-serif;
+  text-align: center;
+  font-weight: 300;
+}
+
+footer h4:hover {
+  color: #dd6300;
+}
+
+/* footer  4500*/
+@media (min-width: 450px) {
+  footer h4 {
+    font-size: 10px;
+    font-family: "Outfit", sans-serif;
+    text-align: center;
+    font-weight: 300;
+  }
+}
+
+/* footer  600*/
+@media (min-width: 600px) {
+  footer h4 {
+    font-size: 14px;
+    font-family: "Outfit", sans-serif;
+    text-align: center;
+    font-weight: 300;
+  }
+}
+
+/* footer 800 */
+@media (min-width: 800px) {
+  footer h4 {
+    font-size: 16px;
+    font-family: "Outfit", sans-serif;
+    text-align: center;
+    font-weight: 300;
+  }
+}
+
+/* footer 1000*/
+@media (min-width: 1000px) {
+  footer h4 {
+    font-size: 18px;
+    font-family: "Outfit", sans-serif;
+    text-align: center;
+    font-weight: 300;
+  }
+}
+
+/* header/nav start */
