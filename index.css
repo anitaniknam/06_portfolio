@@ -5,7 +5,7 @@
 }
 
 body {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -348,7 +348,7 @@ body {
   top: 40%;
   position: absolute;
   aspect-ratio: 1/1;
-  filter: grayscale(100%) blur(2.5px);
+  filter: blur(2.5px);
 
   animation-name: gå_kat;
   animation-duration: 5s;
@@ -362,6 +362,36 @@ body {
   }
   100% {
     transform: translateX(90%);
+  }
+}
+
+#anita_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(SVG/anita.svg);
+  background-size: cover;
+}
+
+#anita_container {
+  width: 25%;
+  left: 35%;
+  top: 40%;
+  position: absolute;
+  aspect-ratio: 1/1;
+  filter: blur(2.5px);
+
+  animation-name: gå_anita;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes gå_anita {
+  0% {
+    transform: translateX(-60%);
+  }
+  100% {
+    transform: translateX(2%);
   }
 }
 
