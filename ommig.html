@@ -13,14 +13,16 @@
       href="https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700;800;900&family=Island+Moments&family=Outfit:wght@100;200;300;400;500;600&family=Vujahday+Script&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/svg+xml" href="Ikoner/favicon.svg" />
+    <link rel="icon" type="image/png" href="ikoner/favicon.svg" />
     <title>Forside</title>
   </head>
   <body>
     <header>
       <div id="mySidepanel" class="sidepanel">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-          ><img src="" alt=""
-        /></a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+          <img src="ikoner/menuluk.svg" alt="" />
+        </a>
         <a href="ommig.html">Om mig</a>
         <a href="tema02.html">Tema 02</a>
         <a href="tema03.html">Tema 03</a>
@@ -28,15 +30,13 @@
         <a href="tema05.html">Tema 05</a>
       </div>
       <button class="openbtn" onclick="openNav()">
-        <img src="" alt="menu_knap" />
+        <img src="ikoner/menuåben.svg" alt="menu_knap" />
       </button>
       <div class="logo">
         <a href="index.html"
           ><img src="SVG/overskrift.svg" alt="overskrift"
         /></a>
       </div>
-      <div class="kat_overskrift"></div>
-      <div class="kat_løber_overskrift"></div>
       <nav id="nav_desktop">
         <ul>
           <li><a href="ommig.html">Om mig</a></li>
@@ -44,60 +44,78 @@
           <li><a href="tema03.html">Tema 03</a></li>
           <li><a href="tema04.html">Tema 04</a></li>
           <li><a href="tema05.html">Tema 05</a></li>
-        </ul>
-      </nav>
-    </header>
-    <!-- <section id="splashbillede_section">
-      <div id="læsommig_button1">
-        <button
-          id="læsommig_button1"
-          onclick="window.location.href='ommig.html'"
-        >
-          Læs mere om mig
-        </button>
-      </div>
-    </section> -->
-    <footer>
-      <div id="personligeinformationer">
-        <h3>PERSONLIGE INFORMATIONER</h3>
-        <ul>
           <li>
-            Telefonnummer:
-            <span class="tlf"><a href="tel:+4550530722">50530722</a> </span>
-          </li>
-          <li>
-            Email:
-            <span class="email"
-              ><a href="mailto:anita.niknam@gmail.com"
-                >anita.niknam@gmail.com</a
-              ></span
-            >
-          </li>
-          <li>
-            Instagram:
             <a href="https://www.instagram.com/anitaniknam/"
-              ><img src="" alt="Instagram"
+              >Instagram<img src="ikoner/Instagram.svg" alt="Instagram"
             /></a>
           </li>
         </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>OM MIG</h2>
+      <div class="profilbillede">
+        <img src="billeder/profilbillede.JPG" alt=" profilbillede" />
       </div>
-      <div id="ommig" onclick="window.location.href='ommig.html'">
-        <h3>OM MIG</h3>
+      <div class="ommig_beskrivelse">
+        <h3>Anita Teymouri Niknam</h3>
+        <h4>MUSIKER OG MULTIMEDIEDESIGNER</h4>
+        <p>
+          Engageret og resultatorienteret musiker og multimediedesigner
+          studerende med stærk passion for at udforske og visualisere nye idéer,
+          design-trends og grafiske udtryk ud fra de indtryk, jeg møder i min
+          hverdag. Her finder jeg glæde i at gå dybden med den kreative proces
+          og have overblik over projektets helhed – lige fra idé til det færdige
+          produkt. Med et skarpt øje for detaljer og et gåpåmod, der brænder for
+          musik, design og ledelse, sætter jeg en ære i, altid at udfordre mig
+          selv og min faglige nysgerrighed til at kunne skabe nye og bedre
+          resultater.
+        </p>
       </div>
-      <div id="tema02" onclick="window.location.href='tema02.html'">
-        <h3>TEMA 02</h3>
-      </div>
-      <div id="tema03" onclick="window.location.href='tema03.html'">
-        <h3>TEMA 03</h3>
-      </div>
-      <div id="tema04" onclick="window.location.href='tema04.html'">
-        <h3>TEMA 04</h3>
-      </div>
-      <div id="tema05" onclick="window.location.href='tema05.html'">
-        <h3>TEMA 05</h3>
-      </div>
-      <div id="some"></div>
-    </footer>
-    <script src="index.js"></script>
+      <div class="deltajer_beskrivelse"></div>
+      <h3>DELTAJER</h3>
+
+      <footer>
+        <div id="kontakt">
+          <h3>KONTAKT</h3>
+          <ul>
+            <li>
+              Telefonnummer:
+              <span class="tlf"><a href="tel:+4550530722">50530722</a> </span>
+            </li>
+            <li>
+              Email:
+              <span class="email"
+                ><a href="mailto:anita.niknam@gmail.com"
+                  >anita.niknam@gmail.com</a
+                ></span
+              >
+            </li>
+            <li>
+              Instagram:
+              <a href="https://www.instagram.com/anitaniknam/"
+                ><img src="ikoner/Instagram.svg" alt="Instagram"
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <div id="ommig" onclick="window.location.href='ommig.html'">
+          <h3>OM MIG</h3>
+        </div>
+        <div id="tema02" onclick="window.location.href='tema02.html'">
+          <h3>TEMA 02</h3>
+        </div>
+        <div id="tema03" onclick="window.location.href='tema03.html'">
+          <h3>TEMA 03</h3>
+        </div>
+        <div id="tema04" onclick="window.location.href='tema04.html'">
+          <h3>TEMA 04</h3>
+        </div>
+        <div id="tema05" onclick="window.location.href='tema05.html'">
+          <h3>TEMA 05</h3>
+        </div>
+      </footer>
+    </main>
+    <script src="style.js"></script>
   </body>
 </html>

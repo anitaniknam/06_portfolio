@@ -1,1 +1,9 @@
+body {
+  background: linear-gradient(#d89864, #e99c64, #e8a7b4, #b88e6d);
+  overflow-x: hidden;
+}
 
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
