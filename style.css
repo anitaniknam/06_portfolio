@@ -11,6 +11,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  max-width: 1000px;
+}
+
 /* animationer */
 
 .drej {
@@ -52,6 +56,34 @@ body {
   }
 }
 
+/* header/nav billeder */
+
+#logo img {
+  height: 100%;
+  width: 100%;
+}
+
+#logo {
+  grid-column: 2/2;
+  grid-row: 1/1;
+  width: 13rem;
+  place-self: center;
+}
+
+#katte {
+  grid-column: 3/3;
+  grid-row: 1/1;
+  width: 7rem;
+  margin-bottom: 15px;
+  padding-right: 10px;
+  place-self: center;
+}
+
+#katte img {
+  width: 100%;
+  height: 100%;
+}
+
 /* header/nav */
 
 .grid_menu {
@@ -85,32 +117,6 @@ a {
 #åbenmenu_knap {
   grid-column: 1/1;
   grid-row: 1/1;
-}
-
-#logo img {
-  height: 100%;
-  width: 100%;
-}
-
-#logo {
-  grid-column: 2/2;
-  grid-row: 1/1;
-  width: 13rem;
-  place-self: center;
-}
-
-#katte {
-  grid-column: 3/3;
-  grid-row: 1/1;
-  width: 7rem;
-  margin-bottom: 15px;
-  padding-right: 10px;
-  place-self: center;
-}
-
-#katte img {
-  width: 100%;
-  height: 100%;
 }
 
 .sidepanel {
@@ -164,12 +170,14 @@ a {
 /* footer */
 
 footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
+  display: flex;
+  place-content: center;
+  gap: 20px;
   background: #e2ceb5;
   padding-top: 30px;
   padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 footer h4 {
@@ -183,6 +191,24 @@ footer h4:hover {
   color: #dd6300;
 }
 
+/* footer  428*/
+@media (min-width: 428px) {
+  footer h4 {
+    font-size: 10px;
+    font-family: "Outfit", sans-serif;
+    text-align: center;
+    font-weight: 300;
+  }
+
+  footer {
+    display: flex;
+    place-content: center;
+    gap: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
 /* footer  450*/
 @media (min-width: 450px) {
   footer h4 {
@@ -190,6 +216,11 @@ footer h4:hover {
     font-family: "Outfit", sans-serif;
     text-align: center;
     font-weight: 300;
+  }
+  footer {
+    display: flex;
+    place-content: center;
+    gap: 10px;
   }
 }
 
@@ -201,6 +232,14 @@ footer h4:hover {
     text-align: center;
     font-weight: 300;
   }
+
+  footer {
+    display: flex;
+    place-content: center;
+    gap: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 /* footer 800 */
@@ -210,6 +249,12 @@ footer h4:hover {
     font-family: "Outfit", sans-serif;
     text-align: center;
     font-weight: 300;
+  }
+
+  footer {
+    display: flex;
+    place-content: center;
+    gap: 40px;
   }
 }
 
@@ -221,14 +266,65 @@ footer h4:hover {
     text-align: center;
     font-weight: 300;
   }
+
+  footer {
+    display: flex;
+    place-content: center;
+    gap: 60px;
+  }
 }
 
-/* header/nav billeder 600 */
 @media (min-width: 600px) {
+  #sol_sprite {
+    width: 100%;
+    height: 100%;
+    background-image: url(SVG/sol.svg);
+    background-size: cover;
+  }
+
+  #sol_container {
+    place-content: end start;
+    width: 20%;
+    left: 9%;
+    top: -12%;
+    position: absolute;
+    aspect-ratio: 1/1;
+
+    animation-name: drej_kf;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+  }
+
+  #stjerne_container {
+    width: 10%;
+    position: absolute;
+    left: 20%;
+    top: 8%;
+    aspect-ratio: 1/1;
+  }
+
+  #stjerne_sprite {
+    width: 100%;
+    height: 100%;
+    background-image: url(ikoner/stjerne_overskrift.svg);
+    background-size: cover;
+
+    animation-name: glow_kf;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+  }
+}
+
+/* header/nav billeder 428 */
+@media (min-width: 428px) {
   #logo {
     grid-column: 2/2;
     grid-row: 1/1;
-    width: 18rem;
+    width: 10rem;
     place-self: center;
   }
 
@@ -245,52 +341,7 @@ footer h4:hover {
   #katte {
     grid-column: 3/3;
     grid-row: 1/1;
-    width: 10rem;
-    padding-right: 30px;
-    place-self: center;
-  }
-
-  #sol_sprite {
-    width: 100%;
-    height: 100%;
-    background-image: url(SVG/sol.svg);
-    background-size: cover;
-  }
-
-  #sol_container {
-    place-content: end start;
-    width: 25%;
-    left: -2%;
-    top: -3%;
-    position: absolute;
-    aspect-ratio: 1/1;
-
-    animation-name: drej_kf;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-direction: alternate;
-  }
-
-  #stjerne_container {
-    width: 10%;
-    position: absolute;
-    left: 12%;
-    top: 22%;
-    aspect-ratio: 1/1;
-  }
-
-  #stjerne_sprite {
-    width: 100%;
-    height: 100%;
-    background-image: url(ikoner/stjerne_overskrift.svg);
-    background-size: cover;
-
-    animation-name: glow_kf;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-direction: alternate;
+    width: 6rem;
   }
 }
 
@@ -568,6 +619,89 @@ footer h4:hover {
   }
 }
 
+/* header/nav menu 428 */
+@media (min-width: 428px) {
+  .grid_menu {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+  }
+
+  header {
+    background: #e2ceb5;
+    position: sticky;
+    top: 0;
+  }
+
+  header ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: #e99c64;
+  }
+
+  #lukmenu_knap {
+    grid-column: 1/1;
+    grid-row: 1/1;
+  }
+
+  #åbenmenu_knap {
+    grid-column: 1/1;
+    grid-row: 1/1;
+  }
+
+  .sidepanel {
+    height: 925px;
+    position: fixed;
+    z-index: 1;
+    top: 20px;
+    left: 0;
+    background-color: #e2ceb5;
+    overflow-x: hidden;
+    padding-top: 120px;
+    transition: 0.3s;
+  }
+
+  .sidepanel a {
+    margin: 0px 0px 50px 30px;
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    transition: 0.3s;
+    font-family: "Cinzel", serif;
+    font-style: bold;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 20px;
+    padding-bottom: 10px;
+    padding-right: 40px;
+  }
+
+  .sidepanel a:hover {
+    color: #dd6300;
+  }
+
+  .sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+  }
+
+  .openbtn {
+    cursor: pointer;
+    place-self: start start;
+    margin: 20px 30px 30px 30px;
+    border: none;
+    background: transparent;
+  }
+
+  #nav_desktop {
+    display: none;
+  }
+}
 /* header/nav menu 600 */
 @media (min-width: 600px) {
   .openbtn {
