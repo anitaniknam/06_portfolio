@@ -329,7 +329,7 @@ footer h4:hover {
     place-content: end start;
     width: 25%;
     left: -2%;
-    top: -6%;
+    top: -8%;
     position: absolute;
     aspect-ratio: 1/1;
 
@@ -344,7 +344,7 @@ footer h4:hover {
     width: 10%;
     position: absolute;
     left: 12%;
-    top: 22%;
+    top: 18%;
     aspect-ratio: 1/1;
   }
 
@@ -397,7 +397,7 @@ footer h4:hover {
     place-content: end start;
     width: 25%;
     left: -2%;
-    top: -6%;
+    top: -9%;
     position: absolute;
     aspect-ratio: 1/1;
 
@@ -412,7 +412,7 @@ footer h4:hover {
     width: 10%;
     position: absolute;
     left: 12%;
-    top: 22%;
+    top: 18%;
     aspect-ratio: 1/1;
   }
 
