@@ -260,8 +260,8 @@ footer h4:hover {
   #sol_container {
     place-content: end start;
     width: 25%;
-    left: -3%;
-    top: -4%;
+    left: -2%;
+    top: -3%;
     position: absolute;
     aspect-ratio: 1/1;
 
@@ -294,12 +294,13 @@ footer h4:hover {
   }
 }
 
-/* header/nav billeder 800 */
-@media (min-width: 800px) {
+/* header/nav billeder 700 */
+@media (min-width: 700px) {
   #logo {
     grid-column: 2/2;
     grid-row: 1/1;
     width: 22rem;
+    place-self: center;
   }
 
   #logo img {
@@ -316,6 +317,76 @@ footer h4:hover {
     grid-column: 3/3;
     grid-row: 1/1;
     width: 12rem;
+    padding-right: 30px;
+    place-self: center;
+  }
+
+  #sol_sprite {
+    width: 100%;
+    height: 100%;
+    background-image: url(SVG/sol.svg);
+    background-size: cover;
+  }
+
+  #sol_container {
+    place-content: end start;
+    width: 25%;
+    left: -3%;
+    top: -4%;
+    position: absolute;
+    aspect-ratio: 1/1;
+
+    animation-name: drej_kf;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+  }
+
+  #stjerne_container {
+    width: 10%;
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    aspect-ratio: 1/1;
+  }
+
+  #stjerne_sprite {
+    width: 100%;
+    height: 100%;
+    background-image: url(ikoner/stjerne_overskrift.svg);
+    background-size: cover;
+
+    animation-name: glow_kf;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+  }
+}
+
+/* header/nav billeder 800 */
+@media (min-width: 800px) {
+  #logo {
+    grid-column: 2/2;
+    grid-row: 1/1;
+    width: 24rem;
+  }
+
+  #logo img {
+    height: 100%;
+    width: 100%;
+  }
+
+  #katte img {
+    width: 100%;
+    height: 100%;
+  }
+
+  #katte {
+    grid-column: 3/3;
+    grid-row: 1/1;
+    width: 13rem;
   }
 
   #sol_sprite {
@@ -329,7 +400,7 @@ footer h4:hover {
     place-content: end start;
     width: 25%;
     left: -2%;
-    top: -8%;
+    top: -7%;
     position: absolute;
     aspect-ratio: 1/1;
 
@@ -362,6 +433,73 @@ footer h4:hover {
   }
 }
 
+/* header/nav billeder 900 */
+@media (min-width: 900px) {
+  #logo {
+    grid-column: 2/2;
+    grid-row: 1/1;
+    width: 26rem;
+  }
+
+  #logo img {
+    height: 100%;
+    width: 100%;
+  }
+
+  #katte img {
+    width: 100%;
+    height: 100%;
+  }
+
+  #katte {
+    grid-column: 3/3;
+    grid-row: 1/1;
+    width: 14rem;
+  }
+
+  #sol_sprite {
+    width: 100%;
+    height: 100%;
+    background-image: url(SVG/sol.svg);
+    background-size: cover;
+  }
+
+  #sol_container {
+    place-content: end start;
+    width: 25%;
+    left: 1%;
+    top: -8%;
+    position: absolute;
+    aspect-ratio: 1/1;
+
+    animation-name: drej_kf;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+  }
+
+  #stjerne_container {
+    width: 10%;
+    position: absolute;
+    left: 16%;
+    top: 18%;
+    aspect-ratio: 1/1;
+  }
+
+  #stjerne_sprite {
+    width: 100%;
+    height: 100%;
+    background-image: url(ikoner/stjerne_overskrift.svg);
+    background-size: cover;
+
+    animation-name: glow_kf;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+  }
+}
 /* header/nav billeder 1000 */
 @media (min-width: 1000px) {
   #logo {
@@ -397,7 +535,7 @@ footer h4:hover {
     place-content: end start;
     width: 25%;
     left: -2%;
-    top: -9%;
+    top: -8%;
     position: absolute;
     aspect-ratio: 1/1;
 
