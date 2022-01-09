@@ -11,11 +11,52 @@ body {
   overflow-x: hidden;
 }
 
-/* header/nav start */
+/* animationer */
 
-#grid {
+.drej {
+  animation-name: drej_kf;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  transform-origin: 0%;
+  animation: linear infinite;
+}
+
+@keyframes drej_kf {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.glow {
+  animation: glow_kf;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+@keyframes glow_kf {
+  0%,
+  100% {
+    filter: brightness(100%) drop-shadow(0 0 -1px white);
+  }
+
+  50% {
+    filter: brightness(110%) drop-shadow(0 0 40px white);
+  }
+}
+
+/* header/nav */
+
+.grid_menu {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 2fr 1fr 2fr;
   grid-template-rows: 1fr;
   gap: 10px;
 }
@@ -23,7 +64,7 @@ body {
 header {
   background: #e2ceb5;
   position: sticky;
-  top: 30px;
+  top: 0;
 }
 
 header ul {
@@ -44,7 +85,6 @@ a {
 #åbenmenu_knap {
   grid-column: 1/1;
   grid-row: 1/1;
-  place-self: center;
 }
 
 #logo img {
@@ -81,7 +121,7 @@ a {
   left: 0;
   background-color: #e2ceb5;
   overflow-x: hidden;
-  padding-top: 200px;
+  padding-top: 120px;
   transition: 0.3s;
 }
 
@@ -95,8 +135,8 @@ a {
   font-style: bold;
   text-transform: uppercase;
   font-weight: 800;
-  font-size: 1.8rem;
-  line-height: 50px;
+  font-size: 20px;
+  padding-bottom: 10px;
   padding-right: 40px;
 }
 
@@ -107,7 +147,6 @@ a {
 .sidepanel .closebtn {
   position: absolute;
   top: 0;
-  margin-top: 30px;
 }
 
 .openbtn {
@@ -184,4 +223,350 @@ footer h4:hover {
   }
 }
 
-/* header/nav start */
+/* header/nav billeder 600 */
+@media (min-width: 600px) {
+  #logo {
+    grid-column: 2/2;
+    grid-row: 1/1;
+    width: 18rem;
+    place-self: center;
+  }
+
+  #logo img {
+    height: 100%;
+    width: 100%;
+  }
+
+  #katte img {
+    width: 100%;
+    height: 100%;
+  }
+
+  #katte {
+    grid-column: 3/3;
+    grid-row: 1/1;
+    width: 10rem;
+    padding-right: 30px;
+    place-self: center;
+  }
+
+  #sol_sprite {
+    width: 100%;
+    height: 100%;
+    background-image: url(SVG/sol.svg);
+    background-size: cover;
+  }
+
+  #sol_container {
+    place-content: end start;
+    width: 25%;
+    left: -3%;
+    top: -4%;
+    position: absolute;
+    aspect-ratio: 1/1;
+
+    animation-name: drej_kf;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+  }
+
+  #stjerne_container {
+    width: 10%;
+    position: absolute;
+    left: 12%;
+    top: 22%;
+    aspect-ratio: 1/1;
+  }
+
+  #stjerne_sprite {
+    width: 100%;
+    height: 100%;
+    background-image: url(ikoner/stjerne_overskrift.svg);
+    background-size: cover;
+
+    animation-name: glow_kf;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+  }
+}
+
+/* header/nav billeder 800 */
+@media (min-width: 800px) {
+  #logo {
+    grid-column: 2/2;
+    grid-row: 1/1;
+    width: 22rem;
+  }
+
+  #logo img {
+    height: 100%;
+    width: 100%;
+  }
+
+  #katte img {
+    width: 100%;
+    height: 100%;
+  }
+
+  #katte {
+    grid-column: 3/3;
+    grid-row: 1/1;
+    width: 12rem;
+  }
+
+  #sol_sprite {
+    width: 100%;
+    height: 100%;
+    background-image: url(SVG/sol.svg);
+    background-size: cover;
+  }
+
+  #sol_container {
+    place-content: end start;
+    width: 25%;
+    left: -2%;
+    top: -6%;
+    position: absolute;
+    aspect-ratio: 1/1;
+
+    animation-name: drej_kf;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+  }
+
+  #stjerne_container {
+    width: 10%;
+    position: absolute;
+    left: 12%;
+    top: 22%;
+    aspect-ratio: 1/1;
+  }
+
+  #stjerne_sprite {
+    width: 100%;
+    height: 100%;
+    background-image: url(ikoner/stjerne_overskrift.svg);
+    background-size: cover;
+
+    animation-name: glow_kf;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+  }
+}
+
+/* header/nav billeder 1000 */
+@media (min-width: 1000px) {
+  #logo {
+    grid-column: 2/2;
+    grid-row: 1/1;
+    width: 28rem;
+  }
+
+  #logo img {
+    height: 100%;
+    width: 100%;
+  }
+
+  #katte img {
+    width: 100%;
+    height: 100%;
+  }
+
+  #katte {
+    grid-column: 3/3;
+    grid-row: 1/1;
+    width: 15rem;
+  }
+
+  #sol_sprite {
+    width: 100%;
+    height: 100%;
+    background-image: url(SVG/sol.svg);
+    background-size: cover;
+  }
+
+  #sol_container {
+    place-content: end start;
+    width: 25%;
+    left: -2%;
+    top: -6%;
+    position: absolute;
+    aspect-ratio: 1/1;
+
+    animation-name: drej_kf;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+  }
+
+  #stjerne_container {
+    width: 10%;
+    position: absolute;
+    left: 12%;
+    top: 22%;
+    aspect-ratio: 1/1;
+  }
+
+  #stjerne_sprite {
+    width: 100%;
+    height: 100%;
+    background-image: url(ikoner/stjerne_overskrift.svg);
+    background-size: cover;
+
+    animation-name: glow_kf;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+  }
+}
+
+/* header/nav menu 600 */
+@media (min-width: 600px) {
+  .openbtn {
+    display: none;
+  }
+
+  #nav_desktop {
+    display: flex;
+    place-content: center;
+  }
+
+  header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding-bottom: 5px;
+    gap: 40px;
+    overflow-x: auto;
+    flex-flow: wrap;
+  }
+
+  .grid_menu {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+  }
+
+  #nav_desktop a {
+    color: #000000;
+    font-family: "Vujahday Script", cursive;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+
+  header {
+    background: #e2ceb5;
+    position: sticky;
+    top: 0;
+    padding-bottom: 20px;
+  }
+
+  #nav_desktop a:hover {
+    color: #dd6300;
+  }
+}
+
+/* header/nav menu 800 */
+@media (min-width: 800px) {
+  .openbtn {
+    display: none;
+  }
+
+  #nav_desktop {
+    display: flex;
+    place-content: center;
+  }
+
+  header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding-bottom: 5px;
+    gap: 50px;
+    overflow-x: auto;
+    flex-flow: wrap;
+  }
+
+  .grid_menu {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+  }
+
+  #nav_desktop a {
+    color: #000000;
+    font-family: "Vujahday Script", cursive;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+
+  header {
+    background: #e2ceb5;
+    position: sticky;
+    top: 0;
+    padding-bottom: 20px;
+  }
+
+  #nav_desktop a:hover {
+    color: #dd6300;
+  }
+}
+
+/* header/nav menu 1000 */
+@media (min-width: 1000px) {
+  .openbtn {
+    display: none;
+  }
+
+  #nav_desktop {
+    display: flex;
+    place-content: center;
+  }
+
+  header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding-bottom: 5px;
+    gap: 60px;
+    overflow-x: auto;
+    flex-flow: wrap;
+  }
+
+  .grid_menu {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+  }
+
+  #nav_desktop a {
+    color: #000000;
+    font-family: "Vujahday Script", cursive;
+    text-transform: uppercase;
+    font-size: 24px;
+  }
+
+  header {
+    background: #e2ceb5;
+    position: sticky;
+    top: 0;
+    padding-bottom: 20px;
+  }
+
+  #nav_desktop a:hover {
+    color: #dd6300;
+  }
+}
